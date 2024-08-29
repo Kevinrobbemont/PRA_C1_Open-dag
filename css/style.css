@@ -2,15 +2,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    background-color: #f4f4f4; /* Lichtgrijs achtergrondkleur */
-    color: #333; /* Donkergrijze tekstkleur */
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 nav {
-    background-color: #003366; /* Donkerblauw voor de navigatiebalk */
+    background-color: #003366;
     color: #fff;
-    padding: 10px 0;
+    padding: 15px;
     text-align: center;
     position: fixed;
     width: 100%;
@@ -20,14 +19,14 @@ nav {
 
 nav ul {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
@@ -37,25 +36,56 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #00a1de; /* Lichtblauw hover kleur */
+    color: #00a1de;
 }
 
 section {
-    padding: 60px 20px;
-    margin-top: 50px;
+    padding: 100px 20px 60px;
+    margin-top: 60px;
 }
 
-section h1, section h2 {
-    color: #003366; /* Donkerblauw voor titels */
+section h1 {
+    color: #003366;
+    text-align: center;
 }
 
 #home {
-    background-color: #00a1de; /* Lichtblauw achtergrondkleur voor Home-sectie */
+    background-color: #00a1de;
     color: #fff;
+    text-align: center;
 }
 
-#about, #services, #contact {
-    background-color: #fff;
+#rooster{
+    background-color: #eb39ce;
+    color: #fff;
+    text-align: center;
+}
+
+#extra-info{
+    background-color: #d0d623;
     color: #333;
     border-bottom: 1px solid #ddd;
+}
+
+#docenten {
+    background-color: #f4f4f4;
+    padding: 40px;
+}
+
+.document-item {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.logo{
+    display:block;
+    margin: 0 auto;
+    width: 10%;
+}
+.homeimg {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
 }
