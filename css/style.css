@@ -67,6 +67,7 @@ section h1 {
     background-color: #eaf11d;
     color: #fff;
     text-align: center;
+    padding: 170px;
 }
 
 #docenten {
@@ -101,7 +102,7 @@ section h1 {
 .opleidingoverzichtimg {
     display: block;
     margin: 0 auto;
-    width: 50%;
+    width: 60%;
 }
 .teacher-grid {
     display: flex;
@@ -117,14 +118,14 @@ section h1 {
 
 .teacher img {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    background-color: #fff;
-    padding: 10px;
+    width: 160px;
+    height: 160px;
+    background-color: #003366;
+    padding: 7px;
 }
 
 .teacher p {
     margin-top: 10px;
     font-size: 1.2em;
-    color: #ff99cc;
+    color: #fff;
 }
