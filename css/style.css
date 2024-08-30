@@ -64,13 +64,13 @@ section h1 {
 }
 
 #opleidingoverzicht{
-    background-color: #d0d623;
+    background-color: #eaf11d;
     color: #fff;
     text-align: center;
 }
 
 #docenten {
-    background-color: #f4f4f4;
+    background-color: #73f409;
     padding: 40px;
 }
 
@@ -102,5 +102,29 @@ section h1 {
     display: block;
     margin: 0 auto;
     width: 50%;
-    border: ;
+}
+.teacher-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.teacher {
+    margin: 20px;
+    text-align: center;
+}
+
+.teacher img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.teacher p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #ff99cc;
 }
