@@ -8,6 +8,7 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
 nav {
     background-color: #003366;
     color: #fff;
@@ -57,12 +58,12 @@ section h1 {
     color: #fff;
     text-align: center;
 }
+
 #home p {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-
-#rooster{
+#rooster {
     background-color: #eb39ce;
     color: #fff;
     text-align: center;
@@ -72,7 +73,7 @@ section h1 {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-#opleidingoverzicht{
+#opleidingoverzicht {
     background-color: #eaf11d;
     color: #fff;
     text-align: center;
@@ -81,10 +82,7 @@ section h1 {
 
 #opleidingoverzicht p {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-
-
 }
-
 
 #docenten {
     background-color: #73f409;
@@ -98,11 +96,13 @@ section h1 {
     border: 1px solid #ddd;
     border-radius: 5px;
 }
-.logo{
-    display:block;
+
+.logo {
+    display: block;
     margin: 0 auto;
     width: 10%;
 }
+
 .homeimg {
     display: block;
     margin: 0 auto;
@@ -115,11 +115,13 @@ section h1 {
     margin: 0 auto;
     width: 50%;
 }
+
 .opleidingoverzichtimg {
     display: block;
     margin: 0 auto;
     width: 60%;
 }
+
 .teacher-grid {
     display: flex;
     flex-wrap: wrap;
@@ -145,4 +147,65 @@ section h1 {
     font-size: 1.2em;
     color: #fff;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+
+@media (max-width: 767px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: .1px 0;
+    }
+
+    .logo {
+        width: 30%;
+    }
+
+    section {
+        padding: 80px 20px 80px;
+    }
+
+    .homeimg, .rooster, .opleidingoverzichtimg {
+        width: 90%;
+    }
+
+    .teacher-grid {
+        flex-direction: column;
+    }
+
+    .teacher {
+        margin: 20px 0;
+    }
+}
+
+
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    .logo {
+        width: 10%;
+    }
+
+    .homeimg, .rooster, .opleidingoverzichtimg {
+        width: 50%;
+    }
+
+    .teacher-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .teacher {
+        margin: 20px;
+    }
 }

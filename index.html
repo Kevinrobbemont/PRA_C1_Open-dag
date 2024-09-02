@@ -45,7 +45,7 @@
             </div>
             <div class="teacher">
                 <img src="img/marc.jpg" alt="Marc">
-                <p>Marc</p>
+                <p></p>
             </div>
             <div class="teacher">
                 <img src="" alt="">
@@ -66,7 +66,6 @@
         </div>
     </section>
 
-    <!-- Verbeterde JavaScript voor vloeiende overgang met glitch fix -->
     <script>
         let isScrolling = false;
 
@@ -83,7 +82,7 @@
                 if (timeElapsed < duration) {
                     requestAnimationFrame(animation);
                 } else {
-                    isScrolling = false; // Reset de scroll status na het voltooien van de animatie
+                    isScrolling = false; 
                 }
             }
 
@@ -98,7 +97,7 @@
         }
 
         document.addEventListener('wheel', function(event) {
-            if (isScrolling) return; // Stop als er al een scrollactie gaande is
+            if (isScrolling) return; 
 
             event.preventDefault();
 
