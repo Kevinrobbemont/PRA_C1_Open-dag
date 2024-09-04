@@ -67,19 +67,19 @@
     </section>
 
     <script>
-        // Check of het apparaat een mobiel apparaat is
-        function isMobileDevice() {
-            return /Mobi|Android/i.test(navigator.userAgent);
+        function isMobile() {
+            return window.innerWidth <= 767; // Definieer mobiele apparaten als schermen kleiner dan of gelijk aan 767px
         }
-
-        if (!isMobileDevice()) {
+    
+        // Alleen de smooth scroll logica uitvoeren op niet-mobiele apparaten
+        if (!isMobile()) {
             let isScrolling = false;
-
+    
             function smoothScroll(target, duration) {
                 let targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
                 let startPosition = window.pageYOffset;
                 let startTime = null;
-
+    
                 function animation(currentTime) {
                     if (startTime === null) startTime = currentTime;
                     let timeElapsed = currentTime - startTime;
@@ -88,47 +88,51 @@
                     if (timeElapsed < duration) {
                         requestAnimationFrame(animation);
                     } else {
-                        isScrolling = false; 
+                        isScrolling = false;
                     }
                 }
-
+    
                 function ease(t, b, c, d) {
                     t /= d / 2;
                     if (t < 1) return c / 2 * t * t + b;
                     t--;
                     return -c / 2 * (t * (t - 2) - 1) + b;
                 }
-
+    
                 requestAnimationFrame(animation);
             }
-
+    
             document.addEventListener('wheel', function(event) {
-                if (isScrolling) return; 
-
-                event.preventDefault();
-
+                if (isScrolling) return; // Vermijd scrollen als er al een scroll actie bezig is
+    
                 let delta = event.deltaY || -event.wheelDelta;
                 let sections = document.querySelectorAll('section');
                 let currentSection;
-
+    
                 sections.forEach(section => {
                     let rect = section.getBoundingClientRect();
                     if (rect.top <= 100 && rect.bottom > 100) {
                         currentSection = section;
                     }
                 });
-
+    
                 if (delta > 0 && currentSection.nextElementSibling) {
+                    event.preventDefault(); // Prevent default scroll only when smooth scroll is applied
                     isScrolling = true;
                     smoothScroll(currentSection.nextElementSibling, 1000);
                 } else if (delta < 0 && currentSection.previousElementSibling) {
+                    event.preventDefault(); // Prevent default scroll only when smooth scroll is applied
                     isScrolling = true;
                     smoothScroll(currentSection.previousElementSibling, 1000);
                 }
-
             }, { passive: false });
+        } else {
+            // Geen smooth scrolling voor mobiele apparaten, standaard scrollen wordt gebruikt
         }
     </script>
+    
+    
+    
 
 </body>
 </html>

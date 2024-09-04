@@ -151,7 +151,7 @@ section h1 {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-
+/* Mobiele styling */
 @media (max-width: 767px) {
     nav ul {
         flex-direction: column;
@@ -159,7 +159,7 @@ section h1 {
     }
 
     nav ul li {
-        margin: .1px 0;
+        margin: 5px 0;
     }
 
     .logo {
@@ -167,7 +167,11 @@ section h1 {
     }
 
     section {
-        padding: 80px 20px 80px;
+        padding: 80px 20px;
+    }
+
+    #home, #rooster, #opleidingoverzicht {
+        padding: 100px 20px; /* Minder padding voor betere leesbaarheid op mobiel */
     }
 
     .homeimg, .rooster, .opleidingoverzichtimg {
@@ -180,34 +184,5 @@ section h1 {
 
     .teacher {
         margin: 20px 0;
-    }
-}
-
-
-@media (min-width: 768px) {
-    nav ul {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    nav ul li {
-        margin: 0 20px;
-    }
-
-    .logo {
-        width: 10%;
-    }
-
-    .homeimg, .rooster, .opleidingoverzichtimg {
-        width: 50%;
-    }
-
-    .teacher-grid {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .teacher {
-        margin: 20px;
     }
 }
