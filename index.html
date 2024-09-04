@@ -21,7 +21,7 @@
     <section id="home">
         <img src="img/beeldsuccesklas.jpg" alt="afbeelding leerling" class="homeimg">
         <h1>Welkom op Curio</h1>
-        <p>Dit is de home van de Curio opendag website!</p>
+        <p>Welkom op de home van de Curio opendag website!</p>
     </section>
 
     <section id="rooster">
@@ -56,71 +56,78 @@
                 <p>Gizem Kezkir</p>
             </div>
             <div class="teacher">
-                <img src="" alt="Kitty">
+                <img src="img/Screenshot 2024-09-04 112322.png" alt="Kitty">
                 <p>Kitty Martens</p>
             </div>
             <div class="teacher">
-                <img src="" alt="Bart">
+                <img src="img/Screenshot 2024-09-04 111703.png" alt="Bart">
                 <p>Bart Kouwenberg</p>
             </div>
         </div>
     </section>
 
     <script>
-        let isScrolling = false;
-
-        function smoothScroll(target, duration) {
-            let targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
-            let startPosition = window.pageYOffset;
-            let startTime = null;
-
-            function animation(currentTime) {
-                if (startTime === null) startTime = currentTime;
-                let timeElapsed = currentTime - startTime;
-                let run = ease(timeElapsed, startPosition, targetPosition - startPosition, duration);
-                window.scrollTo(0, run);
-                if (timeElapsed < duration) {
-                    requestAnimationFrame(animation);
-                } else {
-                    isScrolling = false; 
-                }
-            }
-
-            function ease(t, b, c, d) {
-                t /= d / 2;
-                if (t < 1) return c / 2 * t * t + b;
-                t--;
-                return -c / 2 * (t * (t - 2) - 1) + b;
-            }
-
-            requestAnimationFrame(animation);
+        // Check of het apparaat een mobiel apparaat is
+        function isMobileDevice() {
+            return /Mobi|Android/i.test(navigator.userAgent);
         }
 
-        document.addEventListener('wheel', function(event) {
-            if (isScrolling) return; 
+        if (!isMobileDevice()) {
+            let isScrolling = false;
 
-            event.preventDefault();
+            function smoothScroll(target, duration) {
+                let targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+                let startPosition = window.pageYOffset;
+                let startTime = null;
 
-            let delta = event.deltaY || -event.wheelDelta;
-            let sections = document.querySelectorAll('section');
-            let currentSection;
-
-            sections.forEach(section => {
-                let rect = section.getBoundingClientRect();
-                if (rect.top <= 100 && rect.bottom > 100) {
-                    currentSection = section;
+                function animation(currentTime) {
+                    if (startTime === null) startTime = currentTime;
+                    let timeElapsed = currentTime - startTime;
+                    let run = ease(timeElapsed, startPosition, targetPosition - startPosition, duration);
+                    window.scrollTo(0, run);
+                    if (timeElapsed < duration) {
+                        requestAnimationFrame(animation);
+                    } else {
+                        isScrolling = false; 
+                    }
                 }
-            });
 
-            if (delta > 0 && currentSection.nextElementSibling) {
-                isScrolling = true;
-                smoothScroll(currentSection.nextElementSibling, 1000);
-            } else if (delta < 0 && currentSection.previousElementSibling) {
-                isScrolling = true;
-                smoothScroll(currentSection.previousElementSibling, 1000);
+                function ease(t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return c / 2 * t * t + b;
+                    t--;
+                    return -c / 2 * (t * (t - 2) - 1) + b;
+                }
+
+                requestAnimationFrame(animation);
             }
 
-        }, { passive: false });
+            document.addEventListener('wheel', function(event) {
+                if (isScrolling) return; 
+
+                event.preventDefault();
+
+                let delta = event.deltaY || -event.wheelDelta;
+                let sections = document.querySelectorAll('section');
+                let currentSection;
+
+                sections.forEach(section => {
+                    let rect = section.getBoundingClientRect();
+                    if (rect.top <= 100 && rect.bottom > 100) {
+                        currentSection = section;
+                    }
+                });
+
+                if (delta > 0 && currentSection.nextElementSibling) {
+                    isScrolling = true;
+                    smoothScroll(currentSection.nextElementSibling, 1000);
+                } else if (delta < 0 && currentSection.previousElementSibling) {
+                    isScrolling = true;
+                    smoothScroll(currentSection.previousElementSibling, 1000);
+                }
+
+            }, { passive: false });
+        }
     </script>
 
 </body>
