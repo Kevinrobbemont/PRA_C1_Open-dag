@@ -1,199 +1,196 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Open Sans, sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
-}
-
-html {
+    font-size: 16px;
+    line-height: 1.5em;
+  }
+  
+  html {
     scroll-behavior: smooth;
-}
-
-nav {
-    background-color: #003366;
+  }
+  
+  nav {
+    background-color: #333;
     color: #fff;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-}
-
-nav ul {
+  }
+  
+  nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-}
-
-nav ul li {
-    margin: 0 20px;
+    flex-wrap: wrap;
+  }
+  
+  nav ul li {
+    margin: 10px;
     padding-top: 5px;
-}
-
-nav ul li a {
+  }
+  
+  nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-}
-
-nav ul li a:hover {
+  }
+  
+  nav ul li a:hover {
     color: #00a1de;
-}
-
-section {
-    padding: 100px 20px 100px;
+  }
+  
+  section {
+    padding: 150px 20px;
     margin-top: 0px;
-}
-
-section h1 {
-    color: #003366;
+  }
+  
+  section h1 {
+    color: #333;
     text-align: center;
-}
-
-#home {
-    background-color: #00a1de;
-    color: #fff;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  #home {
+    background-color: #f7f7f7;
+    color: #333;
     text-align: center;
-    padding: 170px;
-}
+    padding: 250px;
+  }
+  
+  #home p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
 
-#home p {
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-#vakken {
-    background-color: #eb39ce;
-    color: #fff;
+  #rooster p {
     text-align: center;
-    padding: 170px;
-}
-
-#vakken p {
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-#rooster {
-    background-color: #eb39ce;
-    color: #fff;
+  }
+  
+  #vakken {
+    background-color: #f7f7f7;
+    color: #333;
     text-align: center;
-    padding: 170px;
-}
-
-#rooster p {
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-#opleidingoverzicht {
-    background-color: #eaf11d;
-    color: #fff;
+    padding: 250px;
+  }
+  
+  #vakken p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
     text-align: center;
-    padding: 230px;
-}
-
-#opleidingoverzicht p {
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-#docenten {
-    background-color: #6ac223;
-    padding: 40px;
-}
-
-.document-item {
-    background-color: #fff;
-    padding: 15px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.logo {
-    display: block;
-    margin: 0 auto;
-    width: 10%;
-}
-
-.homeimg {
-    display: block;
-    margin: 0 auto;
+  }
+  
+  #vakken h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  #vakken ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #vakken li {
+    margin: 20px;
     padding: 20px;
-    width: 50%;
-}
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #vakken li:hover {
+    background-color: #f7f7f7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  #vakken a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  #vakken a:hover {
+    color: #00a1de;
+  }
 
-.rooster {
+  #opleidingoverzicht p {
+    text-align: center;
+  }
+  
+  
+  .logo {
     display: block;
     margin: 0 auto;
-    width: 50%;
-}
-
-.opleidingoverzichtimg {
+    width: 25%;
+  }
+  
+  .homeimg, .rooster, .opleidingoverzichtimg {
     display: block;
     margin: 0 auto;
-    width: 60%;
-}
-
-.teacher-grid {
+    width: 90%;
+    border-radius: 10px;
+  }
+  
+  .teacher-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 20px;
-}
-
-.teacher {
+  }
+  
+  .teacher {
+    background-color: #f7f7f7;
     margin: 20px;
     text-align: center;
-}
-
-.teacher img {
+  }
+  
+  .teacher img {
     border-radius: 50%;
-    width: 250px;
-    height: 260px;
-    background-color: #003366;
+    width: 220px;
+    height: 240px;
+    background-color: #333;
     padding: 7px;
-}
-
-.teacher p {
+  }
+  
+  .teacher p {
     margin-top: 10px;
-    font-size: 1.2em;
+    font-size: 18px;
     color: #fff;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-/* Mobiele styling */
-@media (max-width: 767px) {
+  }
+  
+  /* Mobiele styling */
+  @media (max-width: 767px) {
     nav ul {
-        flex-direction: column;
-        align-items: center;
+      flex-direction: column;
+      align-items: center;
     }
-
+  
     nav ul li {
-        margin: 5px 0;
+      margin: 5px 0;
     }
-
+  
     .logo {
-        width: 30%;
+      width: 50%;
     }
-
+  
     section {
-        padding: 80px 20px;
+      padding: 100px 20px;
     }
-
+  
     #home, #rooster, #opleidingoverzicht {
-        padding: 100px 20px; /* Minder padding voor betere leesbaarheid op mobiel */
-    }
-
-    .homeimg, .rooster, .opleidingoverzichtimg {
-        width: 90%;
-    }
-
-    .teacher-grid {
-        flex-direction: column;
-    }
-
-    .teacher {
-        margin: 20px 0;
+      padding: 150px 
     }
 }
