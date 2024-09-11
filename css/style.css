@@ -171,26 +171,37 @@ body {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   }
   
-  /* Mobiele styling */
-  @media (max-width: 767px) {
-    nav ul {
-      flex-direction: column;
-      align-items: center;
-    }
+
+@media (max-width: 767px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
   
-    nav ul li {
-      margin: 5px 0;
-    }
+  nav ul li {
+    margin: 5px 0;
+    padding: 10px;
+  }
   
-    .logo {
-      width: 50%;
-    }
+  .logo {
+    width: 50%;
+  }
   
-    section {
-      padding: 100px 20px;
-    }
+  section {
+    padding: 80px 20px;
+  }
   
-    #home, #rooster, #opleidingoverzicht {
-      padding: 150px 
-    }
+  #home, #rooster, #opleidingoverzicht {
+    padding: 100px;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 14px;
+    line-height: 1.2em;
+  }
+  
+  @media (max-width: 320px) {
+    font-size: 12px;
+    line-height: 1.1em;
+  }
 }
